@@ -1,4 +1,5 @@
 * {
+  /*outline: 2px dotted orange;*/
   background-color: #FFE7C1;
   font-family: georgia;
   color: #002362;
@@ -16,10 +17,16 @@
 }
 
 h1 {
+  font-family: 'Lobster', cursive;
   font-size: 55px;
+  font-weight: bolder;
   margin-top: 50px;
 }
 
  .about-cookies {
    font-style: italic;
+ }
+
+ h2 {
+   margin-left: 20px;
  }
