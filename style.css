@@ -1,0 +1,25 @@
+* {
+  background-color: #FFE7C1;
+  font-family: georgia;
+  color: #002362;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.num-cookies {
+  font-family: arial;
+}
+
+h1 {
+  font-size: 55px;
+  margin-top: 50px;
+}
+
+ .about-cookies {
+   font-style: italic;
+ }
