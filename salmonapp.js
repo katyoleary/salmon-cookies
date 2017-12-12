@@ -35,14 +35,28 @@ function Cookiestand(locationName, minCustsPerHour, maxCustsPerHour, avgCookiesP
       this.totalDailySales += oneHour;
     }
   }
+  this.render = function(){
+      var ulEl = document.getElementById(this.locationName);
+
+      for(var i = 0; i < hours.length; i++){
+
+        var liEl = document.createElement('li');
+        liEl.textContent = hours[i] + ': ' + this.cookiesEachHour[i] + ' cookies';
+        ulEl.appendChild(liEl);
+      }
+      liEl = document.createElement('li');
+      liEl.textContent = 'Total: ' + this.totalDailySales + ' cookies';
+      ulEl.appendChild(liEl);
+    }
+    storeLocations.push(this);
 }
 
-var pike = new Cookiestand('1st and Pike', 23, 65, 6.3);
+new Cookiestand('pike', 23, 65, 6.3);
 // console.log(pike);
-// new Cookiestand('Seatac Airport', 3, 24, 1.2);
-// new Cookiestand('Seattle Center', 11, 38, 2.3);
-// new Cookiestand('Capitol Hill', 20, 38, 2.3);
-// new Cookiestand('Alki', 2, 16, 4.6);
+new Cookiestand('seatac', 3, 24, 1.2);
+new Cookiestand('sc', 11, 38, 2.3);
+new Cookiestand('cap-hill', 20, 38, 2.3);
+new Cookiestand('alki', 2, 16, 4.6);
 
 
 
