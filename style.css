@@ -1,9 +1,44 @@
+body.contact {
+  background-color: #fff;
+}
+
 * {
-  /*outline: 2px dotted orange;*/
+  /* outline: 2px dotted orange; */
   background-color: #FFE7C1;
   font-family: georgia;
   color: #002362;
   text-align: center;
+}
+
+nav {
+  margin-top: 25px;
+}
+
+li.contact {
+  text-align: center;
+}
+
+.contact {
+  /* margin-right: 800px; */
+  font-family: georgia;
+  text-align: center;
+  f
+}
+
+.bottom {
+  font-style: italic;
+  margin-bottom: 60px;
+}
+
+p.contact, li.contact {
+  font-style: italic;
+}
+
+h2.contact {
+  font-size: 33px;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -20,29 +55,56 @@ h1 {
   font-family: 'Lobster', cursive;
   font-size: 55px;
   font-weight: bolder;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
- .about-cookies {
-   font-style: italic;
- }
+h2.merch {
+  font-family: 'Lobster', cursive;
+  font-size: 45px;
+  font-weight: bolder;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
 
- h2 {
-   margin-left: 20px;
- }
+img {
+  margin-left: 20px;
+  margin-bottom: 30px;
+  border-radius: 35px;
 
- #salmonCookiesTable {
-   margin: auto;
- }
+}
 
- #sales-header {
-   text-align: left;
-   font-weight: bolder;
-   padding-left: 200px;
- }
-  #below-header {
-    font-style: italic;
-    font-size: 10px;
-    text-align: left;
-    margin-left: 300px;
-  }
+.about-cookies {
+  font-style: italic;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+p {
+  margin-top: 30px;
+  line-height: 20px;
+}
+
+#family  {
+  margin-top: 50px;
+  width: 400px;
+  /* float:; */
+}
+
+#salmonCookiesTable {
+  margin: auto;
+}
+
+#sales-header {
+  text-align: left;
+  font-weight: bolder;
+  padding-left: 200px;
+}
+
+#below-header {
+  font-style: italic;
+  font-size: 10px;
+  text-align: left;
+  margin-left: 300px;
+}
