@@ -30,3 +30,13 @@ h1 {
  h2 {
    margin-left: 20px;
  }
+
+ #salmonCookiesTable {
+   margin: auto;
+ }
+
+ #sales-header {
+   text-align: left;
+   font-weight: bolder;
+   padding-left: 200px;
+ }
