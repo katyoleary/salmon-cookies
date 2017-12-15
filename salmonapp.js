@@ -26,7 +26,6 @@ function NewLocation (location, min, max, avg) {
   this.calcCustsEachHour = function() {
     for(var i = 0; i < hours.length; i++) {
       this.custsEachHour.push(random(this.min, this.max));
-      // console.log(this.custsEachHour);
     }
   }
 
@@ -34,7 +33,6 @@ function NewLocation (location, min, max, avg) {
     this.calcCustsEachHour();
     for(var i = 0; i < hours.length; i++) {
       var oneHour = Math.ciel(this.custsEachHour[i] * this.avg);
-      // console.log('ONE HOUR', oneHour);
       data.push(oneHour);
       this.totalDailySales += oneHour;
       createNewRow();
@@ -54,40 +52,10 @@ function cookieData(event) {
   var total = document.getElementById("total");
   total.remove();
   makeFooterRow();
-  form.reset();
+  form.reset;
   console.log(storeLocations)
 }
 
-// function createNewRow() {
-//   // var row;
-//   this.calcCookiesEachHour();
-//
-//   // New Location name
-//
-//   var row = document.createElement('tr');
-//   var tdata = document.createElement('td');
-//   tdata.textContent = locationName;
-//   row.appendChild(tdata);
-//
-//   //num of cookies each hour
-//
-//   for(var i = 0; i < data.length; i++) {
-//     tdata = document.createElement('td');
-//     tdata.textContent = this.cookiesEachHour[i];
-//     row.appendChild(tdata);
-//     }
-//
-//     //daily TOTALS
-//
-//     tdata = document.createElement('tr');
-//     tdata.textContent = this.totalDailySales;
-//     row.appendChild(tdata);
-//
-//     salmonCookiesTable.appendChild(row);
-//     form.reset();
-//   }
-//
-//   form.addEventListener('submit', createNewRow);
 
 //end of form and bottom new row
 
@@ -132,13 +100,10 @@ function Cookiestand(id, locationName, minCustsPerHour, maxCustsPerHour, avgCook
   this.custsEachHour = [];
   this.cookiesEachHour = [];
   storeLocations.push(this);
-  // console.log(locationName);
-  // console.log(maxCustsPerHour);
 
   this.calcCustsEachHour = function() {
     for(var i = 0; i < hours.length; i++) {
       this.custsEachHour.push(random(this.minCustsPerHour, this.maxCustsPerHour));
-      // console.log(this.custsEachHour);
     }
   },
 
@@ -146,9 +111,7 @@ function Cookiestand(id, locationName, minCustsPerHour, maxCustsPerHour, avgCook
     this.calcCustsEachHour();
     for(var i = 0; i < hours.length; i++) {
       var oneHour = Math.ceil(this.custsEachHour[i] * this.avgCookiesPerCust);
-      // console.log(oneHour, 'one hour');
       this.cookiesEachHour.push(oneHour);
-      // console.log(this.cookiesEachHour);
       this.totalDailySales += oneHour;
     }
   }
@@ -203,7 +166,11 @@ new Cookiestand('alki', 'Alki', 2, 16, 4.6);
 function makeFooterRow() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
+
+  tdEl = document.createElement('td');
+  tdEl.textContent = 'Hourly Totals:';
   trEl.appendChild(tdEl);
+
 
   var counter = 0;
 

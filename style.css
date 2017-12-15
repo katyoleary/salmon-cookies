@@ -10,6 +10,10 @@ body.contact {
   text-align: center;
 }
 
+table {
+  margin: auto;
+}
+
 nav {
   margin-top: 25px;
 }
@@ -97,14 +101,13 @@ p {
 }
 
 #sales-header {
-  text-align: left;
+  text-align: center;
   font-weight: bolder;
-  padding-left: 200px;
 }
 
 #below-header {
   font-style: italic;
   font-size: 10px;
-  text-align: left;
-  margin-left: 300px;
+  text-align: center;
+  margin-bottom: 50px;
 }
