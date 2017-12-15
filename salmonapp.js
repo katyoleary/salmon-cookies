@@ -8,6 +8,117 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; // via MDN docs
 }
 
+
+
+// making form function here
+
+
+
+var form = document.getElementById('locations-form');
+var data = [];
+
+function NewLocation (location, min, max, avg) {
+  this.location = location;
+  this.min = min;
+  this.max = max;
+  this.avg = avg;
+  this.custsEachHour = [];
+  this.cookiesEachHour = [];
+  this.totalDailySales = 0;
+
+  this.calcCustsEachHour = function() {
+    for(var i = 0; i < hours.length; i++) {
+      this.custsEachHour.push(random(this.min, this.max));
+      console.log(this.custsEachHour);
+    }
+  }
+
+  this.calcCookiesEachHour = function() {
+    this.calcCustsEachHour();
+    for(var i = 0; i < hours.length; i++) {
+      var oneHour = Math.ciel(this.custsEachHour[i] * this.avg);
+      console.log('ONE HOUR', oneHour);
+      data.push(oneHour);
+      this.totalDailySales += oneHour;
+      createNewRow();
+    }
+  // } data.push(this.cookiesEachHour);
+}
+
+function cookieData(event) {
+  event.preventDefault();
+
+  var locationName = event.target.location.value;
+  var minCustomers = event.target.min.value;
+  var maxCustomers = event.target.max.value;
+  var averageCookies = event.target.avg.value;
+
+  // data.push(new NewLocation(location, min, max, avg));
+}
+
+function createNewRow() {
+  // var row;
+  this.calcCookiesEachHour();
+
+  // New Location name
+
+  var row = document.createElement('tr');
+  var tdata = document.createElement('td');
+  tdata.textContent = locationName;
+  row.appendChild(tdata);
+
+  //num of cookies each hour
+
+  for(var i = 0; i < data.length; i++) {
+    tdata = document.createElement('td');
+    tdata.textContent = this.cookiesEachHour[i];
+    row.appendChild(tdata);
+    }
+
+    //daily TOTALS
+
+    tdata = document.createElement('tr');
+    tdata.textContent = this.totalDailySales;
+    row.appendChild(tdata);
+
+    salmonCookiesTable.appendChild(row);
+    form.reset();
+  }
+
+  form.addEventListener('submit', createNewRow);
+
+
+
+// this.render = function(){
+//     this.calcCookiesEachHour();
+//
+//     // location name
+//
+//     var trEl = document.createElement('tr');
+//     var tdEl = document.createElement('td');
+//     tdEl.textContent = locationName;
+//     trEl.appendChild(tdEl);
+//
+//     //num cookies each hour
+//
+//     for(var i = 0; i < hours.length; i++) {
+//       tdEl = document.createElement('td');
+//       tdEl.textContent = this.cookiesEachHour[i];
+//       trEl.appendChild(tdEl);
+//     }
+//      //daily totals
+//
+//      tdEl = document.createElement('tr');
+//      tdEl.textContent = this.totalDailySales;
+//      trEl.appendChild(tdEl);
+//
+//      salmonCookiesTable.appendChild(trEl);
+//   }
+// }
+
+
+
+
 var storeLocations = [];
 
 // function for entire head row
@@ -142,5 +253,4 @@ new Cookiestand('alki', 'Alki', 2, 16, 4.6);
 
 for(var i = 0; i < storeLocations.length; i++) {
   storeLocations[i].render();
-
-}
+  }
