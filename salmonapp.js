@@ -42,7 +42,6 @@ function NewLocation (location, min, max, avg) {
       this.totalDailySales += oneHour;
       createNewRow();
     }
-  // } data.push(this.cookiesEachHour);
   }
 }
 
@@ -54,7 +53,7 @@ function cookieData(event) {
   var maxCustomers = event.target.max.value;
   var averageCookies = event.target.avg.value;
 
-  // data.push(new NewLocation(location, min, max, avg));
+  data.push(new NewLocation(locationName));
 }
 
 function createNewRow() {
@@ -88,36 +87,7 @@ function createNewRow() {
 
   form.addEventListener('submit', createNewRow);
 
-
-
-// this.render = function(){
-//     this.calcCookiesEachHour();
-//
-//     // location name
-//
-//     var trEl = document.createElement('tr');
-//     var tdEl = document.createElement('td');
-//     tdEl.textContent = locationName;
-//     trEl.appendChild(tdEl);
-//
-//     //num cookies each hour
-//
-//     for(var i = 0; i < hours.length; i++) {
-//       tdEl = document.createElement('td');
-//       tdEl.textContent = this.cookiesEachHour[i];
-//       trEl.appendChild(tdEl);
-//     }
-//      //daily totals
-//
-//      tdEl = document.createElement('tr');
-//      tdEl.textContent = this.totalDailySales;
-//      trEl.appendChild(tdEl);
-//
-//      salmonCookiesTable.appendChild(trEl);
-//   }
-// }
-
-
+//end of form and bottom new row
 
 
 var storeLocations = [];
