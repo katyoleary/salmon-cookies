@@ -197,31 +197,32 @@ new Cookiestand('alki', 'Alki', 2, 16, 4.6);
 
 //TRYING TO MAKE THE GODDAMN HOURLY TOTALS
 
-// function makeFooterRow() {
-//   var trEl = document.createElement('tr');
-//   var tdEl = document.createElement('td');
-//   trEl.appendChild(tdEl);
-//
-// var counter = 0;
-//
-//   console.log('HOURS', hours)
-//   console.log('STORE LOCATIONS', storeLocations)
-//   for(var i = 0; i < hours.length; i++) {
-//     var hourlyTotal = 0;
-//     for(var j = 0; j < storeLocations.length; j++) {
-//       counter++
-//       console.log('@J', storeLocations[j].cookiesEachHour)
-//       // hourlyTotal += storeLocations[j].cookiesEachHour[i];
-//     }
-//     tdEl.innerText = hourlyTotal;
-//     trEl.appendChild(tdEl);
-//   }
-//   salmonCookiesTable.appendChild(trEl);
-//   console.log('HIIIIIIII',trEl);
-// }
-//
-// makeFooterRow();
+function makeFooterRow() {
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  trEl.appendChild(tdEl);
+
+var counter = 0;
+
+  // console.log('HOURS', hours)
+  // console.log('STORE LOCATIONS', storeLocations)
+  for(var i = 0; i < hours.length; i++) {
+    var hourlyTotal = 0;
+    for(var j = 0; j < storeLocations.length; j++) {
+      counter++
+      console.log('@J', storeLocations[j].cookiesEachHour[i])
+      hourlyTotal += storeLocations[j].cookiesEachHour[i];
+    }
+    tdEl.innerText = hourlyTotal;
+    trEl.appendChild(tdEl);
+  }
+  console.log('HIIIIIIII',trEl);
+  salmonCookiesTable.appendChild(trEl);
+}
+
 
 for(var i = 0; i < storeLocations.length; i++) {
   storeLocations[i].render();
   }
+
+  makeFooterRow();
