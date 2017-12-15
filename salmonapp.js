@@ -43,6 +43,7 @@ function NewLocation (location, min, max, avg) {
       createNewRow();
     }
   // } data.push(this.cookiesEachHour);
+  }
 }
 
 function cookieData(event) {
