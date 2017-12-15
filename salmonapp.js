@@ -8,11 +8,7 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; // via MDN docs
 }
 
-
-
 // making form function here
-
-
 
 var form = document.getElementById('locations-form');
 var data = [];
