@@ -1,0 +1,1 @@
+I am creating a webpage for Pat's Salmon Cookies (shops) that displays individual store data in a list format for all locations.  I will also work on branding Pat's homepage with an eye-catching design to lure in potential customers, and give meaningful information about the business. 
