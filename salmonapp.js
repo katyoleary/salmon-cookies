@@ -52,7 +52,7 @@ function cookieData(event) {
   var total = document.getElementById("total");
   total.remove();
   makeFooterRow();
-  form.reset;
+  form.reset();
   console.log(storeLocations)
 }
 
